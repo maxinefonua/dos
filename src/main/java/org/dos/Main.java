@@ -1,9 +1,9 @@
 package org.dos;
 
-import org.apache.commons.logging.Log;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.dos.data.parsers.XMLParser;
+
 import java.io.File;
 
 public class Main {

@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddfa03e-852a-460b-9710-028a37075ba9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Log4j2-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/config/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,9 +55,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "last_opened_file_path": "/Users/maxinefonua/repos/dos/DepartmentOfState/src/test/resources",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.49195403",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
