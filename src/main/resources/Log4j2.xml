@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns="https://logging.apache.org/xml/ns"
+               xsi:schemaLocation="
+                       https://logging.apache.org/xml/ns
+                       https://logging.apache.org/xml/ns/log4j-config-2.xsd">
+
+    <!-- TODO: add database or flume appender to take in logs maybe -->
+    <Appenders>
+        <Console name="CONSOLE">
+            <PatternLayout pattern="%d [%t] %5p %c{1.} - %m%n"/>
+        </Console>
+        <File name="FOUT"
+              fileName="dos.log"
+              append="false">
+            <PatternLayout pattern="%d [%t] %5p %c{1.} - %m%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="CONSOLE"/>
+            <AppenderRef ref="FOUT"/>
+        </Root>
+        <Logger name="org.dos.data.parsers" level="INFO"/>
+    </Loggers>
+
+</Configuration>

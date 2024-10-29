@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddfa03e-852a-460b-9710-028a37075ba9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/config/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/models/AdvisoryEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/models/CountryText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/models/ThreatLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/HTMLParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/traveladvisories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/traveladvisory.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dos/data/models/AdvisoryEntryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dos/data/models/CountryTextTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/countrytravelinfo.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/malformed.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/traveladvisories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/traveladvisory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Log4j2-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/config/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +51,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "last_opened_file_path": "/Users/maxinefonua/repos/dos/DepartmentOfState/src/test/resources",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -80,13 +71,27 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.dos.data.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.XMLParserTest.testParse">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dos.Main" />
+      <module name="DepartmentOfState" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CountryTextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DepartmentOfState" />
       <extension name="coverage">
@@ -102,34 +107,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountryTextTest.whenDeserializingUsingJsonAnySetter_thenCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="XMLParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DepartmentOfState" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.dos.data.models.*" />
+          <option name="PATTERN" value="org.dos.data.parsers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.dos.data.models" />
-      <option name="MAIN_CLASS_NAME" value="org.dos.data.models.CountryTextTest" />
-      <option name="METHOD_NAME" value="whenDeserializingUsingJsonAnySetter_thenCorrect" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CountryTextTest.whenSerializingUsingJsonAnyGetter_thenCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DepartmentOfState" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dos.data.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.dos.data.models" />
-      <option name="MAIN_CLASS_NAME" value="org.dos.data.models.CountryTextTest" />
-      <option name="METHOD_NAME" value="whenSerializingUsingJsonAnyGetter_thenCorrect" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.dos.data.parsers" />
+      <option name="MAIN_CLASS_NAME" value="org.dos.data.parsers.XMLParserTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.XMLParserTest" />
         <item itemvalue="JUnit.XMLParserTest.testParse" />
         <item itemvalue="JUnit.XMLParserTest.testParseThrowsExceptions" />
         <item itemvalue="JUnit.CountryTextTest" />
-        <item itemvalue="JUnit.CountryTextTest.whenSerializingUsingJsonAnyGetter_thenCorrect" />
-        <item itemvalue="JUnit.CountryTextTest.whenDeserializingUsingJsonAnySetter_thenCorrect" />
       </list>
     </recent_temporary>
   </component>
@@ -186,5 +174,16 @@
       <updated>1729502554593</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

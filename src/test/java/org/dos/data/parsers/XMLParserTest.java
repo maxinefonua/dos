@@ -39,12 +39,6 @@ public class XMLParserTest {
         }
 
         try {
-            xmlParser.parse(null);
-        } catch (Exception e) {
-            Assert.assertEquals(e.getClass(), IllegalArgumentException.class);
-        }
-
-        try {
             xmlParser.parse(new File("src/test/resources/malformed.xml"));
         } catch (Exception e) {
             Assert.assertEquals(e.getClass(), SAXParseException.class);

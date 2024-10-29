@@ -1,17 +1,29 @@
 package org.dos;
 
+import org.apache.commons.logging.Log;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.dos.data.parsers.XMLParser;
+import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Project setup");
-        fetchAndParseXML();
-    }
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
 
-    private static void fetchAndParseXML() {
-//        XMLReader myReader = XMLReaderFactory.createXMLReader();
-//        myReader.setContentHandler(handler);
-//        myReader.parse(new InputSource(new URL(url).openStream()));
+public class Main {
+    private static final Logger LOGGER = LogManager.getLogger();
+    private static final String TRAVEL_ADVISORY_URL = "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html";
+    private static final String TRAVEL_ADVISORY_FILEPATH = "src/main/resources/traveladvisory.xml";
+    public static void main(String[] args) throws Exception {
+        LOGGER.info("Project setup");
+        XMLParser xmlParser = new XMLParser();
+        try {
+            xmlParser.parse(new File(TRAVEL_ADVISORY_FILEPATH));
+        } catch (Exception e) {
+            LOGGER.error("failed parsing file '{}'",TRAVEL_ADVISORY_FILEPATH,e);
+            throw new Exception("failed parsing file " + TRAVEL_ADVISORY_FILEPATH, e);
+        }
     }
 }
