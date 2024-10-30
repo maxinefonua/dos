@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddfa03e-852a-460b-9710-028a37075ba9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/services/TravelAdvisoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/services/impl/FetchTravelAdvisoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dos/services/TravelAdvisoryServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dos/services/impl/FetchTravelAdvisoryServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/data/models/CountryText.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dos/data/models/CountryTextTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/countrytravelinfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/malformed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/malformed.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +76,7 @@
       <recent name="org.dos.data.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in DepartmentOfState">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dos.Main" />
       <module name="DepartmentOfState" />
@@ -173,8 +164,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.java in DepartmentOfState" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.java in DepartmentOfState" />
         <item itemvalue="JUnit.XMLParserTest" />
         <item itemvalue="JUnit.XMLParserTest.testParse" />
         <item itemvalue="JUnit.XMLParserTest.testParseThrowsExceptions" />

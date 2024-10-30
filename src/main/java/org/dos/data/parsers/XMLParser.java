@@ -46,6 +46,8 @@ public class XMLParser {
     }
 
     private List<AdvisoryEntry> extractEntries(Document doc) {
+        NodeList updatedList = doc.getElementsByTagName("updated");
+        LOGGER.info("Successfully retrieved XML Doc, last updated: {}",updatedList.item(0).getFirstChild().getTextContent());
         NodeList entries = doc.getElementsByTagName("entry");
         List<AdvisoryEntry> advisoryEntryList = new ArrayList<>();
         for (int i = 0; i < entries.getLength(); i++) {
