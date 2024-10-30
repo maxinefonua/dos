@@ -2,6 +2,7 @@ package org.dos.services.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.dos.config.FetchTravelAdvisoryServiceConfig;
 import org.dos.data.models.AdvisoryEntry;
 import org.dos.data.parsers.XMLParser;
 import org.dos.services.TravelAdvisoryService;
@@ -14,20 +15,17 @@ import java.util.List;
 
 public class FetchTravelAdvisoryService implements TravelAdvisoryService {
     private static final Logger LOGGER = LogManager.getLogger();
-    private static final String TRAVEL_ADVISORY_URL = "https://cadatacatalog.state.gov/dataset/4a387c35-29cb-4902-b91d-3da0dc02e4b2/resource/4c727464-8e6f-4536-b0a5-0a343dc6c7ff/download/traveladvisory.xml";
-    private final HttpClient catalogClient;
-    private final XMLParser xmlParser;
+    private static final FetchTravelAdvisoryServiceConfig fetchTravelAdvisoryServiceConfig = new FetchTravelAdvisoryServiceConfig();
+    private static final HttpClient catalogClient = HttpClient.newHttpClient();
+    private final XMLParser xmlParser = new XMLParser();
 
-    public FetchTravelAdvisoryService() {
-        catalogClient = HttpClient.newHttpClient();
-        xmlParser = new XMLParser();
-    }
+    public FetchTravelAdvisoryService() {}
 
     // TODO: implement caching
     @Override
     public List<AdvisoryEntry> getLatestTravelAdvisories() {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(TRAVEL_ADVISORY_URL))
+                .uri(URI.create(fetchTravelAdvisoryServiceConfig.getTravelAdvisoryUrl()))
                 .build();
         try {
             HttpResponse response = catalogClient.send(request, HttpResponse.BodyHandlers.ofString());

@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddfa03e-852a-460b-9710-028a37075ba9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/config/FetchTravelAdvisoryServiceConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/services/impl/FetchTravelAdvisoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/services/impl/FetchTravelAdvisoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dos/services/impl/FetchTravelAdvisoryServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dos/services/impl/FetchTravelAdvisoryServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/malformed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/malformed.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +48,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "last_opened_file_path": "/Users/maxinefonua/repos/dos/DepartmentOfState/src/test/resources",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.49195403",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/maxinefonua/repos/dos/DepartmentOfState/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.49195403&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources" />
@@ -72,17 +75,19 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.dos.config" />
+      <recent name="org.dos" />
       <recent name="org.dos.services" />
       <recent name="org.dos.data.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.java in DepartmentOfState">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dos.Main" />
       <module name="DepartmentOfState" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.dos.*" />
+          <option name="PATTERN" value="org.dos.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,8 +169,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.java in DepartmentOfState" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.XMLParserTest" />
         <item itemvalue="JUnit.XMLParserTest.testParse" />
         <item itemvalue="JUnit.XMLParserTest.testParseThrowsExceptions" />
@@ -184,6 +189,6 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DepartmentOfState$java_in_DepartmentOfState.ic" NAME="java in DepartmentOfState Coverage Results" MODIFIED="1730240309034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DepartmentOfState$java_in_DepartmentOfState.ic" NAME="java in DepartmentOfState Coverage Results" MODIFIED="1730247188109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
