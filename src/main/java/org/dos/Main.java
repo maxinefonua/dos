@@ -2,22 +2,25 @@ package org.dos;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.dos.data.models.AdvisoryEntry;
 import org.dos.data.parsers.XMLParser;
+import org.dos.services.TravelAdvisoryService;
+import org.dos.services.impl.FetchTravelAdvisoryService;
 
-import java.io.File;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.List;
 
 public class Main {
     private static final Logger LOGGER = LogManager.getLogger();
-    private static final String TRAVEL_ADVISORY_URL = "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html";
-    private static final String TRAVEL_ADVISORY_FILEPATH = "src/main/resources/traveladvisory.xml";
+
+    private static TravelAdvisoryService travelAdvisoryService;
     public static void main(String[] args) throws Exception {
         LOGGER.info("Project setup");
-        XMLParser xmlParser = new XMLParser();
-        try {
-            xmlParser.parse(new File(TRAVEL_ADVISORY_FILEPATH));
-        } catch (Exception e) {
-            LOGGER.error("failed parsing file '{}'",TRAVEL_ADVISORY_FILEPATH,e);
-            throw new Exception("failed parsing file " + TRAVEL_ADVISORY_FILEPATH, e);
-        }
+        travelAdvisoryService = new FetchTravelAdvisoryService();
+        List<AdvisoryEntry> entries = travelAdvisoryService.getLatestTravelAdvisories();
+        LOGGER.info(entries.size());
     }
 }

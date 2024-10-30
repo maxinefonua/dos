@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddfa03e-852a-460b-9710-028a37075ba9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/services/TravelAdvisoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/services/impl/FetchTravelAdvisoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dos/services/TravelAdvisoryServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dos/services/impl/FetchTravelAdvisoryServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/config/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/data/models/CountryText.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dos/data/models/CountryTextTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/countrytravelinfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/malformed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/malformed.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -66,14 +76,16 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.dos.services" />
       <recent name="org.dos.data.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.java in DepartmentOfState">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dos.Main" />
       <module name="DepartmentOfState" />
@@ -87,16 +99,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountryTextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyConfiguration" type="JUnit" factoryName="JUnit">
       <module name="DepartmentOfState" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dos.data.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.dos.data.models" />
-      <option name="MAIN_CLASS_NAME" value="org.dos.data.models.CountryTextTest" />
+      <extension name="coverage" runner="jacoco" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,13 +155,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in DepartmentOfState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DepartmentOfState" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.MyConfiguration" />
+      <item itemvalue="JUnit.java in DepartmentOfState" />
+      <item itemvalue="JUnit.XMLParserTest" />
+      <item itemvalue="JUnit.XMLParserTest.testParse" />
+      <item itemvalue="JUnit.XMLParserTest.testParseThrowsExceptions" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in DepartmentOfState" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.XMLParserTest" />
         <item itemvalue="JUnit.XMLParserTest.testParse" />
         <item itemvalue="JUnit.XMLParserTest.testParseThrowsExceptions" />
-        <item itemvalue="JUnit.CountryTextTest" />
       </list>
     </recent_temporary>
   </component>
@@ -170,15 +192,7 @@
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DepartmentOfState$java_in_DepartmentOfState.ic" NAME="java in DepartmentOfState Coverage Results" MODIFIED="1730240309034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

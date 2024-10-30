@@ -7,6 +7,7 @@ import org.dos.data.models.ThreatLevel;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -14,6 +15,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -33,13 +35,17 @@ public class XMLParser {
 
         PROPS = Set.copyOf(temp); // Java 9+
     }
-    public List<AdvisoryEntry> parse(File file) throws ParserConfigurationException, IOException, SAXException {
-        LOGGER.info("parsing file '{}'",file.getName());
+
+    public List<AdvisoryEntry> parse(String xmlString) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setValidating(false);
-        factory.setIgnoringElementContentWhitespace(true);
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.parse(file);
+        DocumentBuilder db = factory.newDocumentBuilder();
+        InputSource inStream = new InputSource();
+        inStream.setCharacterStream(new StringReader(xmlString));
+        Document doc = db.parse(inStream);
+        return extractEntries(doc);
+    }
+
+    private List<AdvisoryEntry> extractEntries(Document doc) {
         NodeList entries = doc.getElementsByTagName("entry");
         List<AdvisoryEntry> advisoryEntryList = new ArrayList<>();
         for (int i = 0; i < entries.getLength(); i++) {
@@ -81,5 +87,15 @@ public class XMLParser {
             advisoryEntryList.add(advisoryEntry);
         }
         return advisoryEntryList;
+    }
+
+    public List<AdvisoryEntry> parse(File file) throws ParserConfigurationException, IOException, SAXException {
+        LOGGER.info("parsing file '{}'",file.getName());
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setValidating(false);
+        factory.setIgnoringElementContentWhitespace(true);
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document doc = builder.parse(file);
+        return extractEntries(doc);
     }
 }
