@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddfa03e-852a-460b-9710-028a37075ba9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/config/PostgresConnectorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/db/DBConnectorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/db/connectors/PostgresConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/errors/DBError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dos/errors/PostgresDBError.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/config/FetchTravelAdvisoryServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/config/FetchTravelAdvisoryServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/HTMLParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/data/parsers/XMLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/services/TravelAdvisoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/services/TravelAdvisoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dos/services/impl/FetchTravelAdvisoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dos/services/impl/FetchTravelAdvisoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dos/data/models/AdvisoryEntryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dos/data/models/AdvisoryEntryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dos/data/parsers/XMLParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dos/services/impl/FetchTravelAdvisoryServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dos/services/impl/FetchTravelAdvisoryServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +68,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.dos.errors" />
+      <recent name="org.dos.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
@@ -196,19 +197,8 @@
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/dos/services/impl/FetchTravelAdvisoryServiceTest.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DepartmentOfState$FetchTravelAdvisoryServiceTest.ic" NAME="FetchTravelAdvisoryServiceTest Coverage Results" MODIFIED="1730855488219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/DepartmentOfState$FetchTravelAdvisoryServiceTest.ic" NAME="FetchTravelAdvisoryServiceTest Coverage Results" MODIFIED="1730856082048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.dos.services.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/DepartmentOfState$java_in_DepartmentOfState.ic" NAME="java in DepartmentOfState Coverage Results" MODIFIED="1730855766126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
