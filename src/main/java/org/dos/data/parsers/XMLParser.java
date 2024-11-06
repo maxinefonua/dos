@@ -61,27 +61,17 @@ public class XMLParser {
                 String attrName = attr.getNodeName();
                 if (!PROPS.contains(attrName)) continue;
                 switch (attrName) {
-                    case "published":
-                        published = attr.getFirstChild().getTextContent();
-                        break;
-                    case "updated":
-                        updated = attr.getFirstChild().getTextContent();
-                        break;
-                    case "title":
-                        title = attr.getFirstChild().getTextContent().split("-")[0].trim();
-                        break;
-                    case "category":
+                    case "published" -> published = attr.getFirstChild().getTextContent();
+                    case "updated" -> updated = attr.getFirstChild().getTextContent();
+                    case "title" -> title = attr.getFirstChild().getTextContent().split("-")[0].trim();
+                    case "category" -> {
                         String key = attr.getAttributes().getNamedItem("label").getTextContent();
                         String val = attr.getAttributes().getNamedItem("term").getTextContent();
                         if (val.isEmpty()) break;
                         if (key.equals("Country-Tag")) tags.add(val);
-                        else if (key.equals("Threat-Level")) {
-                            threat = ThreatLevel.getEnum(val);
-                        }
-                        break;
-                    case "id":
-                        id = attr.getFirstChild().getTextContent();
-                        break;
+                        else if (key.equals("Threat-Level")) threat = ThreatLevel.getEnum(val);
+                    }
+                    case "id" -> id = attr.getFirstChild().getTextContent();
                 }
             }
             AdvisoryEntry advisoryEntry = new AdvisoryEntry(title,tags,threat,id,updated,published);

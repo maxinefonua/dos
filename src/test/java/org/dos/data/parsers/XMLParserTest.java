@@ -1,11 +1,9 @@
 package org.dos.data.parsers;
 
 import org.dos.data.models.AdvisoryEntry;
-import org.hamcrest.core.IsInstanceOf;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
@@ -13,11 +11,13 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 public class XMLParserTest {
-
     XMLParser xmlParser;
+    private static final String TEST_FILE_PATH = "src/test/resources/traveladvisory.xml";
 
     @Before
     public void setup() {
@@ -25,8 +25,16 @@ public class XMLParserTest {
     }
 
     @Test
-    public void testParse() throws ParserConfigurationException, IOException, SAXException {
-        List<AdvisoryEntry> advisoryEntryList = xmlParser.parse(new File("src/test/resources/traveladvisory.xml"));
+    public void testParseFile() throws ParserConfigurationException, IOException, SAXException {
+        List<AdvisoryEntry> advisoryEntryList = xmlParser.parse(new File(TEST_FILE_PATH));
+        Assert.assertEquals(advisoryEntryList.size(),212);
+    }
+
+    @Test
+    public void testParseString() throws ParserConfigurationException, IOException, SAXException {
+        String xmlString = new String(Files.readAllBytes(Paths.get(TEST_FILE_PATH)));
+
+        List<AdvisoryEntry> advisoryEntryList = xmlParser.parse(xmlString);
         Assert.assertEquals(advisoryEntryList.size(),212);
     }
 
