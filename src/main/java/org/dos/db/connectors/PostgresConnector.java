@@ -17,40 +17,42 @@ public class PostgresConnector implements DBConnectorImpl<AdvisoryEntry> {
     PostgresConnectorConfig postgresConnectorConfig;
     private static Connection connection;
 
-    PostgresConnector(PostgresConnectorConfig postgresConnectorConfig) {
+    public PostgresConnector(PostgresConnectorConfig postgresConnectorConfig) {
         this.postgresConnectorConfig = postgresConnectorConfig;
     }
 
-    private Connection getConnection() throws SQLException {
-        if (connection == null) connection = DriverManager.getConnection(postgresConnectorConfig.getConnectionUrl());
-        return connection;
-    }
+    // TODO: add connection and test
+//    private Connection getConnection() throws SQLException {
+//        if (connection == null) connection = DriverManager.getConnection(postgresConnectorConfig.getConnectionUrl());
+//        return connection;
+//    }
 
-    @Override
-    public Either<DBError, AdvisoryEntry> create(AdvisoryEntry entity) {
-        return Either.left(new PostgresDBError());
-    }
-
-    @Override
-    public Either<DBError, AdvisoryEntry> read(String id) {
-        return Either.left(new PostgresDBError());
-    }
-
-    @Override
-    public Either<DBError, AdvisoryEntry> update(AdvisoryEntry entity) {
-        return Either.left(new PostgresDBError());
-    }
-
-    @Override
-    public Either<DBError, AdvisoryEntry> delete(String id) {
-        return Either.left(new PostgresDBError());
-    }
-
-    public Either<DBError,Integer> executeUpdate(String statement) {
-        return Either.left(new PostgresDBError()); // returns number of rows affected
-    }
-
-    public Either<DBError,ResultSet> executeQuery(String query){
-        return Either.left(new PostgresDBError());
-    }
+    // TODO: add tests for each
+//    @Override
+//    public Either<DBError, AdvisoryEntry> create(AdvisoryEntry entity) {
+//        return Either.left(new PostgresDBError());
+//    }
+//
+//    @Override
+//    public Either<DBError, AdvisoryEntry> read(String id) {
+//        return Either.left(new PostgresDBError());
+//    }
+//
+//    @Override
+//    public Either<DBError, AdvisoryEntry> update(AdvisoryEntry entity) {
+//        return Either.left(new PostgresDBError());
+//    }
+//
+//    @Override
+//    public Either<DBError, AdvisoryEntry> delete(String id) {
+//        return Either.left(new PostgresDBError());
+//    }
+//
+//    public Either<DBError,Integer> executeUpdate(String statement) {
+//        return Either.left(new PostgresDBError()); // returns number of rows affected
+//    }
+//
+//    public Either<DBError,ResultSet> executeQuery(String query){
+//        return Either.left(new PostgresDBError());
+//    }
 }

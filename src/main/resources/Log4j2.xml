@@ -10,6 +10,7 @@
         <Console name="CONSOLE">
             <PatternLayout pattern="%d [%t] %5p %c{1.} - %m%n"/>
         </Console>
+<!--        Below: saves all logs into a file stored in dos.log (not checked into branch)-->
         <File name="FOUT"
               fileName="dos.log"
               append="false">
@@ -18,11 +19,11 @@
     </Appenders>
 
     <Loggers>
-        <Root level="INFO">
+        <Root level="${sys:LOG_LEVEL:-ERROR}">
             <AppenderRef ref="CONSOLE"/>
             <AppenderRef ref="FOUT"/>
         </Root>
-        <Logger name="org.dos.data.parsers" level="INFO"/>
+        <Logger name="org.dos.data.parsers" level="ERROR"/>
     </Loggers>
 
 </Configuration>

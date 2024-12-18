@@ -28,7 +28,7 @@ public class Main {
     private static final Logger LOGGER = LogManager.getLogger();
     private static TravelAdvisoryService travelAdvisoryService;
     public static void main(String[] args) throws Exception {
-        LOGGER.info("Project setup");
+        LOGGER.debug("starting up project");
         travelAdvisoryService = new FetchTravelAdvisoryService(new FetchTravelAdvisoryServiceConfig());
         List<AdvisoryEntry> entries = travelAdvisoryService.getLatestTravelAdvisories();
         LOGGER.info(entries.size());
